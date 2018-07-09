@@ -35,3 +35,4 @@ sourced.
 ## To Start
  * Run `yarn`
  * `yarn start`
+ If you don't have `yarn` installed, you can install it using `homebrew` or `npm`. 
