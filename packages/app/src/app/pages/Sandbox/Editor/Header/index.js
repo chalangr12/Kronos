@@ -10,7 +10,7 @@ import HeartIcon from 'react-icons/lib/fa/heart-o';
 import FullHeartIcon from 'react-icons/lib/fa/heart';
 import SettingsIcon from 'react-icons/lib/md/settings';
 import ShareIcon from 'react-icons/lib/md/share';
-
+import RecordIcon from 'react-icons/lib/md/mic';
 import { patronUrl } from 'common/utils/url-generator';
 
 import PatronBadge from '-!svg-react-loader!common/utils/badges/svg/patron-4.svg'; // eslint-disable-line import/no-webpack-loader-syntax
@@ -68,7 +68,14 @@ const Header = ({ store, signals }) => {
             })
           }
         />
+        {REACT_VERSION}
 
+        <Action
+          Icon={RecordIcon}
+          onClick={() => {
+            console.log('here i am');
+          }}
+        />
         {(sandbox.owned || !store.editor.isAllModulesSynced) && (
           <Action
             onClick={

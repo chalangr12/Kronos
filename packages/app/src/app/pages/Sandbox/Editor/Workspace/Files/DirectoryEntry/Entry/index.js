@@ -42,9 +42,9 @@ class Entry extends React.PureComponent {
   };
 
   handleRename = (newTitle, force) => {
-    const { shortid, title } = this.props
-    if (newTitle === title) return
-    
+    const { shortid, title } = this.props;
+    if (newTitle === title) return;
+
     const canRename = !this.handleValidateTitle(newTitle);
     if (canRename && this.props.rename) {
       this.props.rename(shortid, newTitle);
@@ -65,8 +65,12 @@ class Entry extends React.PureComponent {
     return true; // To close it
   };
 
-  setCurrentModule = () => this.props.setCurrentModule(this.props.id);
+  setCurrentModule = () => {
+    console.log('file changed to ', this.props.title);
+    console.log(this.props);
 
+    this.props.setCurrentModule(this.props.id);
+  };
   onMouseEnter = () => this.setState({ hovering: true });
   onMouseLeave = () => this.setState({ hovering: false });
 

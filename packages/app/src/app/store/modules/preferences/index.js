@@ -16,7 +16,7 @@ export default Module({
       fontSize: 14,
       fontFamily: '',
       lineHeight: 1.5,
-      clearConsoleEnabled: true,
+      clearConsoleEnabled: false,
       autoDownloadTypes: true,
       codeMirror: false,
       keybindings: [],

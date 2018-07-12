@@ -1203,6 +1203,10 @@ class MonacoEditor extends React.Component<Props, State> implements Editor {
 
   handleChange = () => {
     const newCode = this.editor.getModel().getValue() || '';
+    //handle changes here
+    console.log(newCode);
+
+    //
     const currentModule = this.currentModule;
     const title = currentModule.title;
 

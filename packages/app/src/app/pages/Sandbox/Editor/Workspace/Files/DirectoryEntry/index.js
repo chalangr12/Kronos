@@ -157,7 +157,10 @@ class DirectoryEntry extends React.Component {
     });
   };
 
-  toggleOpen = () => this.setOpen(!this.state.open);
+  toggleOpen = () => {
+    console.log('changing file');
+    this.setOpen(!this.state.open);
+  };
   closeTree = () => this.setOpen(false);
   setOpen = open => this.setState({ open });
 

@@ -36,12 +36,12 @@ export interface Props {
   bundlerURL?: string;
   skipEval?: boolean;
   template?:
-    | 'create-react-app'
-    | 'create-react-app-typescript'
-    | 'parcel'
-    | 'vue-cli'
-    | 'angular-cli'
-    | 'preact-cli';
+  | 'create-react-app'
+  | 'create-react-app-typescript'
+  | 'parcel'
+  | 'vue-cli'
+  | 'angular-cli'
+  | 'preact-cli';
 
   onFileChange?: (files: IFiles, sandpack: ISandpackContext) => void;
 }
@@ -49,7 +49,7 @@ export interface Props {
 export default class SandpackProvider extends React.PureComponent<
   Props,
   State
-> {
+  > {
   static defaultProps = {
     skipEval: false,
   };
@@ -162,6 +162,7 @@ export default class SandpackProvider extends React.PureComponent<
     this.setState({ files });
 
     if (this.props.onFileChange) {
+      console.log('here')
       this.props.onFileChange(files, this._getSandpackState());
     }
     if (this.manager) {
