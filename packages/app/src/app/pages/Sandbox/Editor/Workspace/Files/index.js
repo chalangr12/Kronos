@@ -25,7 +25,7 @@ class Files extends React.Component {
   render() {
     const store = this.props.store;
     const sandbox = store.editor.currentSandbox;
-
+    console.log('store here:', store.toJSON());
     return (
       <WorkspaceItem
         defaultOpen

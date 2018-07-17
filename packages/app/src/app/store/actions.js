@@ -363,3 +363,9 @@ export function getContributors({ state }) {
     .then(names => state.set('contributors', names))
     .catch(() => {});
 }
+export function setIsRecording({ state }) {
+  state.set('isRecording', false);
+}
+export function setFileChanges({ state }) {
+  return state.set('fileChanges', []);
+}

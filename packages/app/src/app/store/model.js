@@ -77,4 +77,12 @@ export default {
   maxStorage: types.number,
   usedStorage: types.number,
   updateStatus: types.maybe(types.string),
+  isRecording: types.boolean,
+  fileChanges: types.array(
+    types.model({
+      path: types.string,
+      change: types.string,
+      timeStamp: types.string,
+    })
+  ),
 };

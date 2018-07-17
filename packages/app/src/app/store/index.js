@@ -57,6 +57,8 @@ export default Module({
     maxStorage: 0,
     usedStorage: 0,
     updateStatus: null,
+    isRecording: false,
+    fileChanges: [],
   },
   getters: {
     isPatron,
@@ -91,6 +93,8 @@ export default Module({
     signOutClicked: sequences.signOut,
     signOutGithubIntegration: sequences.signOutGithubIntegration,
     setUpdateStatus: sequences.setUpdateStatus,
+    setIsRecording: sequences.setIsRecording,
+    setFileChanges: sequences.setFileChanges,
   },
   catch: [[errors.AuthenticationError, sequences.showAuthenticationError]],
   modules: {

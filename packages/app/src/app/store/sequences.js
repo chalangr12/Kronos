@@ -327,3 +327,5 @@ export const loadSandbox = factories.withLoadApp([
 ]);
 
 export const setUpdateStatus = [set(state`updateStatus`, props`status`)];
+export const setIsRecording = set(state`isRecording`, false);
+export const setFileChanges = set(state`fileChanges`, null);

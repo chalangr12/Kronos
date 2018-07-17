@@ -111,6 +111,8 @@ export function withLoadApp(continueSequence) {
         actions.setStoredSettings,
         actions.setKeybindings,
         actions.startKeybindings,
+        actions.setIsRecording,
+        actions.setFileChanges,
         when(state`jwt`),
         {
           true: [

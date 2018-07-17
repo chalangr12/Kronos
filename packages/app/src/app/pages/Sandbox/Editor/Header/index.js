@@ -68,14 +68,7 @@ const Header = ({ store, signals }) => {
             })
           }
         />
-        {REACT_VERSION}
 
-        <Action
-          Icon={RecordIcon}
-          onClick={() => {
-            console.log('here i am');
-          }}
-        />
         {(sandbox.owned || !store.editor.isAllModulesSynced) && (
           <Action
             onClick={
@@ -95,6 +88,13 @@ const Header = ({ store, signals }) => {
           tooltip="Download"
           Icon={Download}
           onClick={() => signals.editor.createZipClicked()}
+        />
+        <Action
+          Icon={RecordIcon}
+          onClick={() => {
+            console.log('here i am');
+            console.log(this);
+          }}
         />
       </Left>
 
