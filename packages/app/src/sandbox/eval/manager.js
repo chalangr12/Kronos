@@ -703,7 +703,8 @@ export default class Manager {
       ...addedModules,
       ...updatedModules,
     ]);
-
+    console.log(modulesToUpdate);
+    console.log('here i am as well you fucker');
     // We eagerly transpile changed files,
     // this way we don't have to traverse the whole
     // dependency graph each time a file changes
