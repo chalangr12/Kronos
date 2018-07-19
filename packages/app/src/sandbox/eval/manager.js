@@ -26,6 +26,8 @@ import { packageFilter } from './utils/resolve-utils';
 
 import { ignoreNextCache, deleteAPICache } from './cache';
 
+import CodeSaver from './code-saver';
+
 type Externals = {
   [name: string]: string,
 };
@@ -703,7 +705,8 @@ export default class Manager {
       ...addedModules,
       ...updatedModules,
     ]);
-    console.log(modulesToUpdate);
+    // console.log(modulesToUpdate);
+    CodeSaver.pushChanges(modulesToUpdate);
     console.log('here i am as well you fucker');
     // We eagerly transpile changed files,
     // this way we don't have to traverse the whole
